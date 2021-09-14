@@ -70,7 +70,7 @@ void gui_set_gamma(SDL_Surface *Surface, int FXshadow)
 			if(r) r = precal_pal[r];
 			if(g) g = precal_pal[g];
 			if(b) b = precal_pal[b];
-			//Et une fois qu'on les a modifiés :
+			//Et une fois qu'on les a modifiÃ©s :
 			pixel = SDL_MapRGBA(Surface->format, r, g, b, a);
 			//Et pour changer la valeur d'un pixel :
 			SetPixel(Surface, x, y, pixel);
@@ -119,14 +119,14 @@ void drawSprite(SDL_Surface* imageSurface, SDL_Surface* screenSurface, int srcX,
 	SDL_Rect srcRect;
 	srcRect.x = srcX;
 	srcRect.y = srcY;
-	srcRect.w = width;
-	srcRect.h = height;
+	srcRect.w = height;
+	srcRect.h = width;
 
 	SDL_Rect dstRect;
 	dstRect.x = dstX;
 	dstRect.y = dstY;
-	dstRect.w = width;
-	dstRect.h = height;
+	dstRect.w = height;
+	dstRect.h = width;
 
 	SDL_BlitSurface(imageSurface, &srcRect, screenSurface, &dstRect);
 }
