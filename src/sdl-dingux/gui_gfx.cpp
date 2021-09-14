@@ -117,16 +117,16 @@ void carre_plein(SDL_Surface* screenSurface, int x, int y, int w, int h, Uint32 
 void drawSprite(SDL_Surface* imageSurface, SDL_Surface* screenSurface, int srcX, int srcY, int dstX, int dstY, int width, int height)
 {
 	SDL_Rect srcRect;
-	srcRect.x = srcX;
-	srcRect.y = srcY;
-	srcRect.w = height;
-	srcRect.h = width;
+	srcRect.x = srcY;
+	srcRect.y = srcX;
+	srcRect.w = width;
+	srcRect.h = height;
 
 	SDL_Rect dstRect;
-	dstRect.x = dstX;
-	dstRect.y = dstY;
-	dstRect.w = height;
-	dstRect.h = width;
+	dstRect.x = dstY;
+	dstRect.y = dstX;
+	dstRect.w = width;
+	dstRect.h = height;
 
 	SDL_BlitSurface(imageSurface, &srcRect, screenSurface, &dstRect);
 }
